@@ -2,8 +2,8 @@
 "use strict";
 var C = {
   background: {
-    image: ('rpg_background.png')
-    //scale: 1
+    image: ('rpg_background.png'),
+    scale: 1
   }
 };
 
