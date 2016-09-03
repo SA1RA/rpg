@@ -26,7 +26,6 @@ class BootState {
 }
 
 class PreloadState {
-  this.load.image("background",C.background.image)
 
   create() {
     game.state.start('Start')
@@ -40,6 +39,7 @@ class StartState {
   }
 
   preload() {
+    this.load.image("background",C.background.image)
   }
 
   create() {
