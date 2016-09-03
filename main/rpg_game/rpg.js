@@ -3,7 +3,7 @@
 var C = {
   background: {
     image: ('rpg_background.png')
-    scale: 1
+    //scale: 1
   }
 };
 
