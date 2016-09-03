@@ -1,6 +1,10 @@
 
 "use strict";
 var C = {
+  background: {
+    image: ('rpg_background.png')
+    scale: 1
+  }
 };
 
 
@@ -22,6 +26,7 @@ class BootState {
 }
 
 class PreloadState {
+  this.load.image("background",C.background.image)
 
   create() {
     game.state.start('Start')
@@ -38,6 +43,10 @@ class StartState {
   }
 
   create() {
+    this.background = this.add.tileSprite(0,0,800,800,'background');
+    //this.background.autoScroll(0,C.background.scroll);
+    this.background.scale.set(C.background.scale);
+    
     game.state.start('Play')
   }
 
