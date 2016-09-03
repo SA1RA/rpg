@@ -45,7 +45,7 @@ class StartState {
   create() {
     this.background = this.add.tileSprite(0,0,800,800,'background');
     //this.background.autoScroll(0,C.background.scroll);
-    this.background.scale.set(C.background.scale);
+    //this.background.scale.set(C.background.scale);
     
     game.state.start('Play')
   }
