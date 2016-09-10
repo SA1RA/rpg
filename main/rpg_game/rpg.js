@@ -4,7 +4,7 @@ var C = {
   background: {
     image: 'rpg_background.png',
     scale: 1
-  };
+  },
   player: {
     image: 'turtle1.png',
     width: 63,
