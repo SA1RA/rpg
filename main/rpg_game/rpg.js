@@ -52,16 +52,36 @@ class StartState {
 class PlayState {
 
   create() {
-    game.physics.startSystem(Phaser.Physics.ARCADE);
+    game.physics.startSystem(Phaser.Physics.P2JS);
     // background
     this.background = this.add.tileSprite(0,0,800,800,'background');
     //this.background.autoScroll(0,C.background.scroll);
     this.background.scale.set(C.background.scale);
     
-    
+    cursors = game.input.keyboard.createCursorKeys();
   }
 
   update() {
+    player.body.setZeroVelocity();
+
+    if (cursors.left.isDown)
+    {
+    	player.body.moveLeft(400);
+    }
+    else if (cursors.right.isDown)
+    {
+    	player.body.moveRight(400);
+    }
+
+    if (cursors.up.isDown)
+    {
+    	sprite.body.moveUp(400);
+    }
+    else if (cursors.down.isDown)
+    {
+    	sprite.body.moveDown(400);
+    }
+
   }
 
   handleCollision() {
