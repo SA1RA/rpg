@@ -95,12 +95,6 @@ class PlayState {
         this.player.body.velocity.y = -300;
     }
     //Movement^
-    
-    
-  handleCollision() {
-    game.state.start('End')
-  }
-
 }
 
 class EndState {
