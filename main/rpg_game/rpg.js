@@ -83,16 +83,16 @@ class PlayState {
     this.player.body.velocity.x = 0;
     
     if (this.left.isDown) {
-        this.player.body.velocity.x = -300;
+        this.player.body.moveLeft(300);
     }
     else if (this.right.isDown) {
-        this.player.body.velocity.x = 300;
+        this.player.body.moveRight(300);
     }
-    else if (this.up.isDown) {
-        this.player.body.velocity.y = 300;
+    if (this.up.isDown) {
+        this.player.body.moveUp(300);
     }
     else if (this.down.isDown) {
-        this.player.body.velocity.y = -300;
+        this.player.body.moveDown(300);
     }
     //Movement^
 }
