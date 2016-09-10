@@ -1,10 +1,12 @@
 
 "use strict";
 var C = {
+  //background
   background: {
     image: 'rpg_background.png',
     scale: 1
   },
+  //player
   player: {
     image: 'turtle1.png',
     width: 63,
@@ -69,6 +71,7 @@ class PlayState {
     //this.background.autoScroll(0,C.background.scroll);
     this.background.scale.set(C.background.scale);
     
+    //Add keys
     this.right = game.input.keyboard.addKey(Phaser.KeyCode.D);
     this.left = game.input.keyboard.addKey(Phaser.KeyCode.A);
     this.up = game.input.keyboard.addKey(Phaser.KeyCode.W);
@@ -76,6 +79,7 @@ class PlayState {
   }
 
   update() {
+    //Movementv
     this.player.body.velocity.x = 0;
     
     if (this.left.isDown) {
@@ -90,6 +94,9 @@ class PlayState {
     else if (this.down.isDown) {
         this.player.body.velocity.y = -300;
     }
+    //Movement^
+    
+    
   handleCollision() {
     game.state.start('End')
   }
