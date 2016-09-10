@@ -2,9 +2,10 @@
 "use strict";
 var C = {
   background: {
-    image: 'rpg_background.png',
+    image: 'background_rome5.gif',
     scale: 1
   }
+  
 };
 
 
@@ -12,7 +13,7 @@ var C = {
 class BootState {
 
   init() {
-    console.log("%c~~~ Booting RPG ~~~\n Compliments of Smlucas13",
+    console.log("%c~~~ Booting New_Rome ~~~\n Compliments of Smlucas13",
                 "color:#fdf6e3; background:#073642");
     this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
     this.scale.pageAlignHorizontally = true;
@@ -39,14 +40,10 @@ class StartState {
   }
 
   preload() {
-    this.load.image("background",C.background.image)
+    this.load.image('background',C.background.image);
   }
 
   create() {
-    this.background = this.add.tileSprite(0,0,800,800,'background');
-    //this.background.autoScroll(0,C.background.scroll);
-    this.background.scale.set(C.background.scale);
-    
     game.state.start('Play')
   }
 
@@ -56,10 +53,19 @@ class PlayState {
 
   create() {
     game.physics.startSystem(Phaser.Physics.ARCADE);
+    // background
+    this.background = this.add.tileSprite(0,0,800,800,'background');
+    //this.background.autoScroll(0,C.background.scroll);
+    this.background.scale.set(C.background.scale);
+    
+    
   }
 
   update() {
-    
+  }
+
+  handleCollision() {
+    game.state.start('End')
   }
 
 }
@@ -79,3 +85,4 @@ game.state.add('Start', StartState);
 game.state.add('Play', PlayState);
 game.state.add('End', EndState);
 game.state.start('Boot');
+Contact GitHub API Training Shop Blog About
