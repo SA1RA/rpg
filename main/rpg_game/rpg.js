@@ -97,6 +97,21 @@ class PlayState {
     //Movement^
 }
 
+handleCollision() {
+    game.state.start('End')
+  }
+
+}
+
+class EndState {
+
+  create() {
+    game.state.start('Start')
+  }
+
+}
+
+
 var game = new Phaser.Game(800,800);
 game.state.add('Boot', BootState);
 game.state.add('Preload', PreloadState);
