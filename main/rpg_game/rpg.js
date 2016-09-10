@@ -85,4 +85,3 @@ game.state.add('Start', StartState);
 game.state.add('Play', PlayState);
 game.state.add('End', EndState);
 game.state.start('Boot');
-Contact GitHub API Training Shop Blog About
