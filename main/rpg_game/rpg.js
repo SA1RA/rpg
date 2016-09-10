@@ -2,7 +2,7 @@
 "use strict";
 var C = {
   background: {
-    image: 'background_rome5.gif',
+    image: 'rpg_background.png',
     scale: 1
   }
   
@@ -13,7 +13,7 @@ var C = {
 class BootState {
 
   init() {
-    console.log("%c~~~ Booting New_Rome ~~~\n Compliments of Smlucas13",
+    console.log("%c~~~ Booting RPG ~~~\n Compliments of Smlucas13",
                 "color:#fdf6e3; background:#073642");
     this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
     this.scale.pageAlignHorizontally = true;
