@@ -7,8 +7,8 @@ var C = {
   };
   player: {
     image: 'turtle1.png',
-    width: 36,
-    height: 36,
+    width: 63,
+    height: 64,
     frames: 1,
     startx: 400,
     starty: 400,
