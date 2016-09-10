@@ -4,7 +4,18 @@ var C = {
   background: {
     image: 'rpg_background.png',
     scale: 1
-  }
+  };
+  player: {
+    image: 'turtle1.png',
+    width: 36,
+    height: 36,
+    frames: 1,
+    startx: 400,
+    starty: 400,
+    bounce: 0.3,
+    drag: 3000,
+    speed: 300
+  },
   
 };
 
