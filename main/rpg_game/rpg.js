@@ -58,32 +58,27 @@ class PlayState {
     //this.background.autoScroll(0,C.background.scroll);
     this.background.scale.set(C.background.scale);
     
-    cursors = game.input.keyboard.createCursorKeys();
+    this.right = game.input.keyboard.addKey(Phaser.KeyCode.D);
+    this.left = game.input.keyboard.addKey(Phaser.KeyCode.A);
+    this.up = game.input.keyboard.addKey(Phaser.KeyCode.W);
+    this.down = game.input.keyboard.addKey(Phaser.KeyCode.S);
   }
 
   update() {
-    player.body.setZeroVelocity();
-
-    if (cursors.left.isDown)
-    {
-    	player.body.moveLeft(400);
+    this.player.body.velocity.x = 0;
+    
+    if (this.left.isDown) {
+        this.player.body.velocity.x = -300;
     }
-    else if (cursors.right.isDown)
-    {
-    	player.body.moveRight(400);
+    else if (this.right.isDown) {
+        this.player.body.velocity.x = 300;
     }
-
-    if (cursors.up.isDown)
-    {
-    	sprite.body.moveUp(400);
+    else if (this.up.isDown) {
+        this.player.body.velocity.y = 300;
     }
-    else if (cursors.down.isDown)
-    {
-    	sprite.body.moveDown(400);
+    else if (this.down.isDown) {
+        this.player.body.velocity.y = -300;
     }
-
-  }
-
   handleCollision() {
     game.state.start('End')
   }
