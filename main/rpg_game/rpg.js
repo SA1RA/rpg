@@ -84,6 +84,7 @@ class PlayState {
     this.player.enableBody
     this.player.body.kinematic = true;
     game.physics.p2.updateBoundsCollisionGroup();
+    this.player.body.fixedRotation = true;
     console.log(this.player);
     //this.player.smoothed = false; 
     //this.player.scale.set(3);
@@ -98,8 +99,8 @@ class PlayState {
 
   update() {
     //Movementv
-    //this.player.body.velocity.x = 0;
-    //this.player.body.velocity.y = 0;
+    this.player.body.velocity.x = 0;
+    this.player.body.velocity.y = 0;
     
     if (this.left.isDown) {
         this.player.body.moveLeft(300);
