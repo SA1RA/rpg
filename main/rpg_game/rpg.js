@@ -54,7 +54,7 @@ class StartState {
 
   preload() {
     this.load.image('background',C.background.image);
-    this.load.spritesheet('turtle1.png',
+    this.load.spritesheet('player',
       C.player.image,
       C.player.width,
       C.player.height,
@@ -79,7 +79,7 @@ class PlayState {
     this.background.scale.set(C.background.scale);
     
     // player
-    //this.player = this.add.sprite(C.player.startx,C.player.starty,'player');
+    this.player = this.add.sprite(C.player.startx,C.player.starty,'player');
     //this.player.smoothed = false; 
     //this.player.scale.set(3);
     //this.player.anchor.set(0.5,0.5);
