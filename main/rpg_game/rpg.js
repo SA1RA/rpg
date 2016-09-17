@@ -54,7 +54,7 @@ class StartState {
 
   preload() {
     this.load.image('background',C.background.image);
-    game.load.spritesheet('player',
+    this.load.spritesheet('turtle1,png',
       C.player.image,
       C.player.width,
       C.player.height,
