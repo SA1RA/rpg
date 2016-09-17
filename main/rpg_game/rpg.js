@@ -7,16 +7,16 @@ var C = {
     scale: 1
   },
   //player
-  player: {
-    image: 'turtle1.png',
-    width: 63,
-    height: 64,
-    frames: 1,
-    startx: 400,
-    starty: 400,
-    bounce: 0.3,
-    drag: 3000,
-    speed: 300
+  //player: {
+  //  image: 'turtle1.png',
+  //  width: 63,
+  //  height: 64,
+  //  frames: 1,
+  //  startx: 400,
+  //  starty: 400,
+  //  bounce: 0.3,
+  //  drag: 3000,
+  //  speed: 300
   },
   
 };
@@ -54,11 +54,11 @@ class StartState {
 
   preload() {
     this.load.image('background',C.background.image);
-    this.load.spritesheet('player',
-      C.player.image,
-      C.player.width,
-      C.player.height,
-      C.player.frames
+    //this.load.spritesheet('player',
+    //  C.player.image,
+    //  C.player.width,
+    //  C.player.height,
+    //  C.player.frames
     );
 
   }
@@ -79,10 +79,10 @@ class PlayState {
     this.background.scale.set(C.background.scale);
     
     // player
-    this.player = this.add.sprite(C.player.startx,C.player.starty,'player');
-    this.player.smoothed = false; 
-    this.player.scale.set(3);
-    this.player.anchor.set(0.5,0.5);
+    //this.player = this.add.sprite(C.player.startx,C.player.starty,'player');
+    //this.player.smoothed = false; 
+    //this.player.scale.set(3);
+    //this.player.anchor.set(0.5,0.5);
     
     //Add keys
     this.right = game.input.keyboard.addKey(Phaser.KeyCode.D);
