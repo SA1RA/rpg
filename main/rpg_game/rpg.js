@@ -59,7 +59,7 @@ class StartState {
     //  C.player.width,
     //  C.player.height,
     //  C.player.frames
-    );
+    //);
 
   }
 
