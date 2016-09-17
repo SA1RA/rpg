@@ -79,7 +79,7 @@ class PlayState {
     this.background.scale.set(C.background.scale);
     
     // player
-    this.player = this.add.sprite(C.player.startx,C.player.starty,'player');
+    this.player = game.add.sprite(C.player.startx,C.player.starty,'player');
     //this.player.smoothed = false; 
     //this.player.scale.set(3);
     //this.player.anchor.set(0.5,0.5);
