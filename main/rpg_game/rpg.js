@@ -80,7 +80,7 @@ class PlayState {
     
     // player
     this.player = game.add.sprite(C.player.startx,C.player.starty,'player');
-    console.log("th.player");
+    console.log(this.player);
     //this.player.smoothed = false; 
     //this.player.scale.set(3);
     //this.player.anchor.set(0.5,0.5);
