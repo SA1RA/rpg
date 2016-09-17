@@ -93,7 +93,8 @@ class PlayState {
 
   update() {
     //Movementv
-    this.player.body.setZeroVelocity();
+    this.player.body.velocity.x = 0;
+    this.player.body.velocity.y = 0;
     
     if (this.left.isDown) {
         this.player.body.moveLeft(300);
