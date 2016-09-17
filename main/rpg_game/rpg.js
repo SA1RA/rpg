@@ -7,17 +7,17 @@ var C = {
     scale: 1
   },
   //player
-  //player: {
-  //  image: 'turtle1.png',
-  //  width: 63,
-  //  height: 64,
-  //  frames: 1,
-  //  startx: 400,
-  //  starty: 400,
-  //  bounce: 0.3,
-  //  drag: 3000,
-  //  speed: 300
-  //},
+  player: {
+    image: 'turtle1.png',
+    width: 63,
+    height: 64,
+    frames: 1,
+    startx: 400,
+    starty: 400,
+    bounce: 0.3,
+    drag: 3000,
+    speed: 300
+  },
   
 };
 
