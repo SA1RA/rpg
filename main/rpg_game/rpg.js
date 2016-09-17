@@ -83,6 +83,7 @@ class PlayState {
     game.physics.p2.enable(this.player);
     this.player.enableBody
     this.player.body.kinematic = true;
+    game.physice.p2.updateBoundsCollisionGroup();
     console.log(this.player);
     //this.player.smoothed = false; 
     //this.player.scale.set(3);
