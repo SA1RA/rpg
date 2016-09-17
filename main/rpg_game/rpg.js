@@ -78,6 +78,12 @@ class PlayState {
     //this.background.autoScroll(0,C.background.scroll);
     this.background.scale.set(C.background.scale);
     
+    // player
+    this.player = this.add.sprite(C.player.startx,C.player.starty,'player');
+    this.player.smoothed = false; 
+    this.player.scale.set(3);
+    this.player.anchor.set(0.5,0.5);
+    
     //Add keys
     this.right = game.input.keyboard.addKey(Phaser.KeyCode.D);
     this.left = game.input.keyboard.addKey(Phaser.KeyCode.A);
