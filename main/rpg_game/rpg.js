@@ -93,21 +93,21 @@ class PlayState {
 
   update() {
     //Movementv
-    //this.player.body.velocity.x = 0;
-    //this.player.body.velocity.y = 0;
+    this.player.body.velocity.x = 0;
+    this.player.body.velocity.y = 0;
     
-    //if (this.left.isDown) {
-    //    this.player.body.moveLeft(300);
-    //}
-    //else if (this.right.isDown) {
-    //    this.player.body.moveRight(300);
-    //}
-    //if (this.up.isDown) {
-    //    this.player.body.moveUp(300);
-    //}
-    //else if (this.down.isDown) {
-    //    this.player.body.moveDown(300);
-    //}
+    if (this.left.isDown) {
+        this.player.body.moveLeft(300);
+    }
+    else if (this.right.isDown) {
+        this.player.body.moveRight(300);
+    }
+    if (this.up.isDown) {
+        this.player.body.moveUp(300);
+    }
+    else if (this.down.isDown) {
+        this.player.body.moveDown(300);
+    }
     //Movement^
 }
 
