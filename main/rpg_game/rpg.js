@@ -82,6 +82,7 @@ class PlayState {
     this.player = game.add.sprite(C.player.startx,C.player.starty,'player');
     game.physics.p2.enable(this.player);
     this.player.enableBody
+    this.playe.body.kinematic = true;
     console.log(this.player);
     //this.player.smoothed = false; 
     //this.player.scale.set(3);
