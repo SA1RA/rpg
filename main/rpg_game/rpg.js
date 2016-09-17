@@ -54,12 +54,12 @@ class StartState {
 
   preload() {
     this.load.image('background',C.background.image);
-    //this.load.spritesheet('player',
-    //  C.player.image,
-    //  C.player.width,
-    //  C.player.height,
-    //  C.player.frames
-    //);
+    game.load.spritesheet('player',
+      C.player.image,
+      C.player.width,
+      C.player.height,
+      C.player.frames
+    );
 
   }
 
