@@ -101,6 +101,13 @@ class PlayState {
   }
 
   update() {
+    //angle
+    if (cursors.left.isDown) {this.player.body.rotateLeft(100);}   //ship movement
+    else if (cursors.right.isDown){this.player.body.rotateRight(100);}
+    else {tjis.player.body.setZeroRotation();}
+    if (cursors.up.isDown){this.player.body.thrust(400);}
+    else if (cursors.down.isDown){this.player.body.reverse(400);}
+    
     //Movementv
     this.player.body.velocity.x = 0;
     this.player.body.velocity.y = 0;
