@@ -75,7 +75,7 @@ class PlayState {
   create() {
     game.physics.startSystem(Phaser.Physics.P2JS);
     // background
-    this.background = this.add.tileSprite(0,0,800,800,'background');
+    this.background = this.add.tileSprite(0,0,1600,1600,'background');
     this.game.world.setBounds(0, 0, 1600, 1600);
     //this.background.autoScroll(0,C.background.scroll);
     this.background.scale.set(C.background.scale);
