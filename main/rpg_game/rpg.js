@@ -102,7 +102,10 @@ class PlayState {
 
   update() {
     //angle
-    if (this.left.isDown) {this.player.body.rotateLeft(100);}   //ship movement
+    if (this.left.isDown) {
+      this.player.body.rotateLeft(100);
+      console.log("rotating left");
+    }   //ship movement
     else if (this.right.isDown){this.player.body.rotateRight(100);}
     else {this.player.body.setZeroRotation();}
     if (this.up.isDown){this.player.body.thrust(400);}
