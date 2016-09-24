@@ -54,6 +54,7 @@ class StartState {
 
   preload() {
     this.load.image('background',C.background.image);
+    
     this.load.spritesheet('player',
       C.player.image,
       C.player.width,
@@ -75,6 +76,7 @@ class PlayState {
     game.physics.startSystem(Phaser.Physics.P2JS);
     // background
     this.background = this.add.tileSprite(0,0,800,800,'background');
+    this.game.world.setBounds(0, 0, 1600, 1600);
     //this.background.autoScroll(0,C.background.scroll);
     this.background.scale.set(C.background.scale);
     
@@ -86,6 +88,7 @@ class PlayState {
     game.physics.p2.updateBoundsCollisionGroup();
     this.player.body.fixedRotation = true;
     console.log(this.player);
+    this.game.camera.follow(this.player);
     //this.player.smoothed = false; 
     //this.player.scale.set(3);
     //this.player.anchor.set(0.5,0.5);
@@ -115,6 +118,17 @@ class PlayState {
         this.player.body.moveDown(300);
     }
     //Movement^
+    
+    //camera
+    if (this.game.camera.atLimit.x)
+    {
+        this.background.tilePosition.x -= (this.player.body.velocity.x * game.time.physicsElapsed);
+    }
+
+    if (this.game.camera.atLimit.y)
+    {
+        this.background.tilePosition.y -= (this.player.body.velocity.y * game.time.physicsElapsed);
+    }
 }
 
 handleCollision() {
