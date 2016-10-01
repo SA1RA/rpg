@@ -102,31 +102,48 @@ class PlayState {
 
   update() {
     //angle
-    if (this.left.isDown) {
-      this.player.body.rotateLeft(100);
-      console.log("rotating left");
-    }   //ship movement
-    else if (this.right.isDown){this.player.body.rotateRight(100);}
-    else {this.player.body.setZeroRotation();}
-    if (this.up.isDown){this.player.body.thrust(400);}
-    else if (this.down.isDown){this.player.body.reverse(400);}
+    //if (this.left.isDown) {
+    //  this.player.angle += 10;
+    //  console.log("rotating left");
+    //}   //ship movement
+    //else if (this.right.isDown){this.player.body.rotateRight(100);}
+    //else {this.player.body.setZeroRotation();}
+    //if (this.up.isDown){this.player.body.thrust(400);}
+    //else if (this.down.isDown){this.player.body.reverse(400);}
     
     //Movementv
     this.player.body.velocity.x = 0;
     this.player.body.velocity.y = 0;
     
-    //if (this.left.isDown) {
-    //    this.player.body.moveLeft(300);
-    //}
-    //else if (this.right.isDown) {
-    //    this.player.body.moveRight(300);
-    //}
-    //if (this.up.isDown) {
-    //    this.player.body.moveUp(300);
-    //}
-    //else if (this.down.isDown) {
-    //    this.player.body.moveDown(300);
-    //}
+    if (this.left.isDown) {
+        this.player.body.moveLeft(50);
+        this.player.angle = 270;
+    }
+    else if (this.right.isDown) {
+        this.player.body.moveRight(50);
+        this.player.angle = 90;
+    }
+    if (this.up.isDown) {
+        this.player.body.moveUp(50);
+        this.player.angle = 0;
+    }
+    else if (this.down.isDown) {
+        this.player.body.moveDown(50);
+        this.player.angle = 180;
+    }
+    //angles
+    if (this.up.isDown && this.right.isDown) {
+        this.player.angle = 40;
+    }
+    else if (this.up.isDown && this.left.isDown) {
+        this.player.angle = 320;
+    }
+    if (this.down.isDown && this.right.isDown) {
+        this.player.angle = 140;
+    }
+    else if (this.down.isDown && this.left.isDown) {
+        this.player.angle = 220;
+    }
     //Movement^
     
     //camera
@@ -140,19 +157,11 @@ class PlayState {
         this.background.tilePosition.y -= (this.player.body.velocity.y * game.time.physicsElapsed);
     }
 }
-
-handleCollision() {
-    game.state.start('End')
-  }
-
 }
-
 class EndState {
-
   create() {
     game.state.start('Start')
   }
-
 }
 
 
