@@ -3,7 +3,7 @@
 var C = {
   //background
   background: {
-    image: 'rpg_background.png',
+    image: 'art2.jpg',
     scale: 1
   },
   //player
